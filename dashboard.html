@@ -2,20 +2,60 @@
 <html>
 <head>
   <title>Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body style="background:#0f172a;color:white;text-align:center;">
-  <h1>Dashboard</h1>
-  <p>Saldo: Rp 0</p>
 
-  <h3>Order Followers</h3>
-  <input placeholder="Username IG"><br><br>
-  <input placeholder="Jumlah"><br><br>
-  <button onclick="order()">Order</button>
+<body style="background:#020617;color:white;font-family:Arial;">
 
-  <script>
-    function order() {
-      alert("Order berhasil (dummy)");
-    }
-  </script>
+<script>
+  if(localStorage.getItem("login") !== "true"){
+    window.location.href = "login.html";
+  }
+</script>
+
+<div style="padding:20px;">
+
+  <h2>Client Panel 😈</h2>
+  <p>Status: Online</p>
+
+  <!-- DRIP -->
+  <div class="card">
+    <h3>Drip Client</h3>
+    <p>Status: Active</p>
+    <button onclick="alert('Drip Open')">Open</button>
+  </div>
+
+  <!-- HG -->
+  <div class="card">
+    <h3>HG Client</h3>
+    <p>Status: Active</p>
+    <button onclick="alert('HG Open')">Open</button>
+  </div>
+
+  <!-- PATO -->
+  <div class="card">
+    <h3>Pato Client</h3>
+    <p>Status: Active</p>
+    <button onclick="alert('Pato Open')">Open</button>
+  </div>
+
+</div>
+
+<style>
+.card {
+  background:#1e293b;
+  padding:15px;
+  border-radius:10px;
+  margin-bottom:15px;
+}
+button {
+  width:100%;
+  padding:10px;
+  border:none;
+  background:#38bdf8;
+  border-radius:8px;
+}
+</style>
+
 </body>
 </html>
